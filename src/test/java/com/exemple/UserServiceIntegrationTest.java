@@ -16,12 +16,12 @@ public class UserServiceIntegrationTest {
     }
 
     @Test
-    public void testCreateAndGetUser() {
-        userService.createUser("Бат");
+public void testCreateAndGetUser() {
+    userService.createUser("Бат");
 
-        String found = userService.getUserById(1);
-        assertEquals("Дорж", found); // "Бат" байхад "Дорж" гэж буруу бичлээ
-    }
+    String found = userService.getUserById(1);
+    assertEquals("Дорж", found); // "Бат" байхад "Дорж" гэж буруу бичлээ
+}
 
     @Test
     public void testGetUser_notFound_returnsNull() {
