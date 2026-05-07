@@ -1,6 +1,7 @@
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class UserServiceIntegrationTest {
 
@@ -16,12 +17,10 @@ public class UserServiceIntegrationTest {
 
     @Test
     public void testCreateAndGetUser() {
-        // Arrange + Act
         userService.createUser("Бат");
 
-        // Assert
         String found = userService.getUserById(1);
-        assertEquals("Бат", found);
+        assertEquals("Дорж", found); // "Бат" байхад "Дорж" гэж буруу бичлээ
     }
 
     @Test
