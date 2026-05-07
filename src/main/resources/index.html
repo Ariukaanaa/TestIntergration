@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Project</title>
+  <style>
+    body { font-family: sans-serif;  background-color: rgb(212, 35, 65) ;   max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    h1 { color: #333; }
+    .badge { background: #28a745; color: white; padding: 4px 10px; border-radius: 4px; font-size: 14px; }
+    pre { background: #f4f4f4; padding: 16px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Demo Project <span class="badge">v1.1</span></h1>
+  <p>Plain Java + Maven + JUnit 4 ашигласан жишээ project.</p>
+
+  <h2>Бүтэц</h2>
+  <pre>
+ src
+│   ├── main
+│   │   └── java
+│   │       └── com
+│   │           └── exemple
+│   │               ├── UserRepository.java
+│   │               └── UserService.java
+│   └── test
+│       └── java
+│           └── com
+│               └── exemple
+│                   └── UserServiceIntegrationTest.java
+  </pre>
+
+  <h2>Ажиллуулах</h2>
+  <pre>mvn test</pre>
+
+  <h2>CI/CD</h2>
+  <p>GitHub Actions автоматаар тест ажиллуулж, JAR build хийнэ.</p>
+</body>
+</html>

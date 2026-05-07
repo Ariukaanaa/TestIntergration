@@ -1,3 +1,5 @@
+package com.exemple;
+
 public class UserService {
 
     private UserRepository userRepository;
