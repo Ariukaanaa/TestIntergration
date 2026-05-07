@@ -1,3 +1,5 @@
+package com.exemple;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import org.junit.Before;
@@ -16,12 +18,14 @@ public class UserServiceIntegrationTest {
     }
 
     @Test
-public void testCreateAndGetUser() {
-    userService.createUser("Бат");
+    public void testCreateAndGetUser() {
+        // Arrange + Act
+        userService.createUser("Бат");
 
-    String found = userService.getUserById(1);
-    assertEquals("Дорж", found); // "Бат" байхад "Дорж" гэж буруу бичлээ
-}
+        // Assert
+        String found = userService.getUserById(1);
+        assertEquals("Бат", found);
+    }
 
     @Test
     public void testGetUser_notFound_returnsNull() {
