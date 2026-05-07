@@ -17,10 +17,12 @@ public class UserServiceIntegrationTest {
 
     @Test
     public void testCreateAndGetUser() {
+        // Arrange + Act
         userService.createUser("Бат");
 
+        // Assert
         String found = userService.getUserById(1);
-        assertEquals("Дорж", found); // "Бат" байхад "Дорж" гэж буруу бичлээ
+        assertEquals("Бат", found);
     }
 
     @Test
