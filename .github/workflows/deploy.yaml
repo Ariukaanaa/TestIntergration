@@ -2,7 +2,9 @@ name: Deploy
 
 on:
   push:
-    branches: [main , dev ] 
+    branches: [main, dev]
+    tags:
+      - 'v*'
 
 jobs:
   deploy:
@@ -19,6 +21,7 @@ jobs:
         run: mvn package -DskipTests
 
       - name: GitHub Releases-т оруулах
+        if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
           files: target/*.jar
